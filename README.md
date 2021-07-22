@@ -11,7 +11,7 @@ This website was created for the purpose of learning how to use React. It contai
 
 ### Run Project 
 
-To run this project you will need to make sure `npm` and Node is installed on your computer. For more information an how to install `npm` and Node go [here](https://nodejs.org/en/download/).
+To run this project you will need to make sure `npm` and Node are installed on your computer. For more information an how to install `npm` and Node go [here](https://nodejs.org/en/download/).
 
 From the terminal:
 
