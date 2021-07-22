@@ -3,7 +3,7 @@ import ProfilePicture from '../../images/home/profilePictureTwo.jpg';
 import "./introduction.css";
 
 const lineOneText = 'Hi, my name is Giovani.';
-const lineTwoText = 'I am a software developer. ';
+const lineTwoText = 'I am a software engineer. ';
 
 class Introduction extends Component {
   constructor(props) {
@@ -101,11 +101,18 @@ class Introduction extends Component {
               <h1 className="text-center text-lg-left line-one-type-size">{this.state.currentLineOne}<span className={this.getCursorClasses(1)}>|</span></h1>
               <h2 className="text-center text-lg-left line-two-type-size">{this.state.currentLineTwo}<span className={this.getCursorClasses(2)}>|</span></h2>
             </div>
-            <a href="#bio">
-              <div className="text-center text-lg-left pt-4 pt-lg-5 pl-3"> 
-                <button type="button" className="btn btn-outline-primary btn-lg">Get To Know Me</button>
+            <div className="pl-3 pt-4 text-center text-lg-left">
+              <div className="d-inline pr-3"> 
+                <a href="#bio">
+                  <button type="button" className="btn btn-outline-primary btn-lg">Get To Know Me</button>
+                </a>
               </div>
-            </a>
+              <div className="d-inline">
+                <a href="https://www.linkedin.com/in/giovaniluisrodriguez/" target="_blank" rel="noreferrer">
+                  <button type="button" className="btn btn-outline-primary btn-lg">Resume</button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
