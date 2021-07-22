@@ -11,34 +11,48 @@ class History extends Component {
     this.timelineContainers = [
       {
         ref: React.createRef(),
-        heading: 'Miami Dade College - 2014',
-        content: `I studied at MDC as a Computer Engineering major. I consistently took more programming and computer science
-                  courses than my major required. These included courses like VB, C, C++, Java among other high rigour courses.`,
+        heading: 'Miami Dade College',
+        time: '2014 - 2016',
+        content: `I graduated with an Associates majoring in Computer Engineering.
+                  During my time at Miami Dade College I was given the opportunity
+                  to explore many different technologies like C, C++ and Java. It 
+                  is where I learned how to code and more importantly where I 
+                  discovered I was interested in software development.`,
         position: 'left'
       },
       {
         ref: React.createRef(),
-        heading: 'EnTec - 2015',
-        content: `I graduated from MDC and was offered a position as a teaching assistant at MDC's school of engineering
-                  technology. My goal was to inpire students and help them excel in the area of IT.`,
+        heading: 'EnTec',
+        time: '2015 - 2016',
+        content: `Shortly before graduating I was offered a position as a Teaching 
+                  Assistant at Miami Dade College. This role helped develop my communication
+                  skills and showed me I had a passion for teaching others about programming.`,
         position: 'right'
       },
       {
         ref: React.createRef(),
-        heading: 'CS50x Miami - 2016',
-        content: `I completed Harvard's largest MOOC course called CS50 offered at MDC's Idea Center. Was invited to Boston to 
-                  present my project to CS50's professor David Malan. I later volunteered myself as a teaching fellow for others taking
-                  the CS50x Miami course.`,
+        heading: 'CS50x Miami',
+        time: '2016 - 2017',
+        content: `Through MDC's Idea Center I got the chance to enroll in Harvard's
+                  largest MOOC course called CS50. This course was challenging but 
+                  was one of the best experiences I had in a classroom setting. It 
+                  laid the foundation I needed to take my skills to the next level.`,
         position: 'left'
       },
       {
         ref: React.createRef(),
-        heading: 'InsTech - 2017',
-        content: `After many internships and job applications I was hired by Insurance Technologies. A software company focused on
-                  bringing comprehensive solutions to clients in the insurance industry. I'm currently the lead developer in charge
-                  of a system that is used by 300+ employees.`,
+        heading: 'Insurance Technologies',
+        time: '2017 - 2020',
+        content: `I started off as a Junior Software Developer with InsTech. They provide software solutions for insurance companies. I learned a lot about software development during my time there and over the years was able to make major contributions to many of their solutions. My last position at InsTech was of Lead Software Developer.`,
         position: 'right'
       },
+      {
+        ref: React.createRef(),
+        heading: 'Orion Advisor Technology',
+        time: '2020 - Present',
+        content: `I now work as a Software Engineer for Orion Advisor Tech. They provide software solutions in the fintech space. I am currently working on a project that provides financial advisors with the planning tools they need to give their clients the best experience.`,
+        position: 'left'
+      }
     ];
   }
 
@@ -99,8 +113,11 @@ class History extends Component {
             return (
               <div className={this.getTimelineContainerClasses(timelineContainer, i)} ref={(el) => timelineContainer.ref = el} key={i}>
                 <div className="timeline-content">
-                  <h1>{timelineContainer.heading}</h1>
-                  <h5>{timelineContainer.content}</h5>
+                  <h1><b>{timelineContainer.heading}</b></h1>
+                  <span className="d-none d-md-inline"><h1>{timelineContainer.time}</h1></span>
+                  <span className="d-inline d-md-none"><h2>{timelineContainer.time}</h2></span>
+                  <span className="d-none d-md-inline"><h4><b>{timelineContainer.content}</b></h4></span>
+                  <span className="d-inline d-md-none"><h5><b>{timelineContainer.content}</b></h5></span>
                 </div>
               </div>
             );
