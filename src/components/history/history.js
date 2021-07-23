@@ -5,53 +5,60 @@ class History extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      wasTimelineConatinerInView: [false, false, false, false]
+      wasTimelineContainerInView: [false, false, false, false]
     };
 
     this.timelineContainers = [
       {
         ref: React.createRef(),
         heading: 'Miami Dade College',
-        time: '2014 - 2016',
-        content: `I graduated with an Associates majoring in Computer Engineering.
+        year: '2014',
+        yearCount: '2',
+        description: `I graduated with an Associates majoring in Computer Engineering.
                   During my time at Miami Dade College I was given the opportunity
                   to explore many different technologies like C, C++ and Java. It 
                   is where I learned how to code and more importantly where I 
-                  discovered I was interested in software development.`,
-        position: 'left'
+                  discovered I was interested in software development.`
       },
       {
         ref: React.createRef(),
         heading: 'EnTec',
-        time: '2015 - 2016',
-        content: `Shortly before graduating I was offered a position as a Teaching 
+        year: '2015',
+        yearCount: '1',
+        description: `Shortly before graduating I was offered a position as a Teaching 
                   Assistant at Miami Dade College. This role helped develop my communication
-                  skills and showed me I had a passion for teaching others about programming.`,
-        position: 'right'
+                  skills and showed me I had a passion for teaching others about programming.`
       },
       {
         ref: React.createRef(),
         heading: 'CS50x Miami',
-        time: '2016 - 2017',
-        content: `Through MDC's Idea Center I got the chance to enroll in Harvard's
+        year: '2016',
+        yearCount: '1',
+        description: `Through MDC's Idea Center I got the chance to enroll in Harvard's
                   largest MOOC course called CS50. This course was challenging but 
                   was one of the best experiences I had in a classroom setting. It 
-                  laid the foundation I needed to take my skills to the next level.`,
-        position: 'left'
+                  laid the foundation I needed to take my skills to the next level.`
       },
       {
         ref: React.createRef(),
         heading: 'Insurance Technologies',
-        time: '2017 - 2020',
-        content: `I started off as a Junior Software Developer with InsTech. They provide software solutions for insurance companies. I learned a lot about software development during my time there and over the years was able to make major contributions to many of their solutions. My last position at InsTech was of Lead Software Developer.`,
-        position: 'right'
+        year: '2017',
+        yearCount: '3',
+        description: `I started off as a Junior Software Developer with InsTech. They provide 
+                      software solutions for insurance companies. I learned a lot about software 
+                      development during my time there and over the years was able to make major 
+                      contributions to many of their solutions. My last position at InsTech was 
+                      of Lead Software Developer.`
       },
       {
         ref: React.createRef(),
         heading: 'Orion Advisor Technology',
-        time: '2020 - Present',
-        content: `I now work as a Software Engineer for Orion Advisor Tech. They provide software solutions in the fintech space. I am currently working on a project that provides financial advisors with the planning tools they need to give their clients the best experience.`,
-        position: 'left'
+        year: '2020',
+        yearCount: 'Present',
+        description: `I now work as a Software Engineer for Orion Advisor Tech. They provide 
+                      software solutions in the fintech space. I am currently working on a
+                      project that provides financial advisors with the planning tools they
+                      need to give their clients the best experience.`
       }
     ];
   }
@@ -67,63 +74,52 @@ class History extends Component {
   }
 
   checkTimelimeContainersInView = () => {
-    let wasTimelineConatinerInView = this.state.wasTimelineConatinerInView;
+    let wasTimelineContainerInView = this.state.wasTimelineContainerInView;
 
     for (var i = 0; i < this.timelineContainers.length; i++) {
       let timelineContainerRef = this.timelineContainers[i].ref;
       if (this.isElementInView(timelineContainerRef)) {
-        wasTimelineConatinerInView[i] = true;
+        wasTimelineContainerInView[i] = true;
       }
     }
 
-    if (wasTimelineConatinerInView.every(x => x)) {
+    if (wasTimelineContainerInView.every(x => x)) {
       window.removeEventListener('scroll', this.checkTimelimeContainersInView);
     }
 
     this.setState({
-      wasTimelineConatinerInView: wasTimelineConatinerInView
+      wasTimelineContainerInView: wasTimelineContainerInView
     });
-  }
-
-  getTimelineContainerClasses = (timelineContainer, i) => { 
-    let defaultClasses = 'timeline-container';
-    let isLeft = timelineContainer.position === 'left';
-
-    if (isLeft) {
-      defaultClasses += ' timeline-left';
-    } else {
-      defaultClasses += ' timeline-right';
-    }
-
-    if (i === (this.timelineContainers.length - 1)) {
-      defaultClasses += ' mb-3';
-    } else {
-      defaultClasses += ' mb-5';
-    }
-    
-    return defaultClasses;
   }
 
   render() {
     return (
-      <div className="container-fluid" id="history">
-        <div className="section-height"></div>
-        <div className="timeline">
-          {this.timelineContainers.map((timelineContainer, i) => {
+      <div className="container mt-5 mb-5">
+        <div className="main-timeline">
+        {this.timelineContainers.map((timelineContainer, i) => {
             return (
-              <div className={this.getTimelineContainerClasses(timelineContainer, i)} ref={(el) => timelineContainer.ref = el} key={i}>
-                <div className="timeline-content">
-                  <h1><b>{timelineContainer.heading}</b></h1>
-                  <span className="d-none d-md-inline"><h1><strong>{timelineContainer.time}</strong></h1></span>
-                  <span className="d-inline d-md-none"><h2><strong>{timelineContainer.time}</strong></h2></span>
-                  <span className="d-none d-md-inline"><h4><strong>{timelineContainer.content}</strong></h4></span>
-                  <span className="d-inline d-md-none"><h5><strong>{timelineContainer.content}</strong></h5></span>
-                </div>
+              <div className="timeline mt-5" ref={(el) => timelineContainer.ref = el} key={i} >
+                  <div className="icon"></div>
+                  <div className="date-content">
+                      <div className="date-outer">
+                          <span className="date">
+                            <span className="year">{timelineContainer.year}</span>
+                            <span className="month">{timelineContainer.yearCount === 'Present' ? timelineContainer.yearCount : timelineContainer.yearCount + ' Years'}</span>
+                          </span>
+                      </div>
+                  </div>
+                  <div className="timeline-content">
+                      <h2 className="title"><strong>{timelineContainer.heading}</strong></h2>
+                      <h2 className="description content-text-size">
+                          {timelineContainer.description}
+                      </h2>
+                  </div>
               </div>
             );
           })}
         </div>
       </div>
+
     );
   }
 

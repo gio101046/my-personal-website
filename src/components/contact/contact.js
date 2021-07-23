@@ -10,7 +10,7 @@ class Contact extends Component {
           <div className="col"> 
             <div className="text-center">
               <h1 className="w-100">
-                Wanna work together?
+                Wanna Work Together?
               </h1>
               <h2 className="mx-auto content-text-size content-width mt-4">
                 You can get a hold of me by emailing me at <strong>me@grodriguez.dev</strong>.

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './skills.css';
 import CSharpIcon from '../../images/technologies/csharp.png';
 import PythonIcon from '../../images/technologies/python.png';
-import JavascriptIcon from '../../images/technologies/javascript.svg';
+import JavaScriptIcon from '../../images/technologies/javascript.svg';
 import SqlIcon from '../../images/technologies/sql.png';
 
 
@@ -19,7 +19,7 @@ class Skills extends Component {
       },
       {
         ref: React.createRef(),
-        image: JavascriptIcon,
+        image: JavaScriptIcon,
         name: "Javascript"
       },
       {
@@ -41,7 +41,6 @@ class Skills extends Component {
   render() {
     return (
       <div className="container" id="skills">
-        <div className="section-height"></div>
         <div className="row">
           <div className="col">
             <div className="text-center border-top border-bottom ml-2 mr-2 pb-5 pt-5">
