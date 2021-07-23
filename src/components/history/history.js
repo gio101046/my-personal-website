@@ -94,7 +94,7 @@ class History extends Component {
 
   render() {
     return (
-      <div className="container mt-5 mb-5">
+      <div className="container pt-5 pb-5" id="history">
         <div className="main-timeline">
         {this.timelineContainers.map((timelineContainer, i) => {
             return (
