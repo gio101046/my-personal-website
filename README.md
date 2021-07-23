@@ -34,5 +34,8 @@ Following the above will run the project in development mode and will open a bro
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Credits
+<a href="https://iconscout.com/icons/javascript" target="_blank">Javascript Flat  Logo Icon</a> by <a href="https://iconscout.com/contributors/jagathish" target="_blank">Jagathish Saravanan</a>
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
