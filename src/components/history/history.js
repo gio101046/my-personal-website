@@ -114,10 +114,10 @@ class History extends Component {
               <div className={this.getTimelineContainerClasses(timelineContainer, i)} ref={(el) => timelineContainer.ref = el} key={i}>
                 <div className="timeline-content">
                   <h1><b>{timelineContainer.heading}</b></h1>
-                  <span className="d-none d-md-inline"><h1>{timelineContainer.time}</h1></span>
-                  <span className="d-inline d-md-none"><h2>{timelineContainer.time}</h2></span>
-                  <span className="d-none d-md-inline"><h4><b>{timelineContainer.content}</b></h4></span>
-                  <span className="d-inline d-md-none"><h5><b>{timelineContainer.content}</b></h5></span>
+                  <span className="d-none d-md-inline"><h1><strong>{timelineContainer.time}</strong></h1></span>
+                  <span className="d-inline d-md-none"><h2><strong>{timelineContainer.time}</strong></h2></span>
+                  <span className="d-none d-md-inline"><h4><strong>{timelineContainer.content}</strong></h4></span>
+                  <span className="d-inline d-md-none"><h5><strong>{timelineContainer.content}</strong></h5></span>
                 </div>
               </div>
             );
