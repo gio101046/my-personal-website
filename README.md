@@ -2,14 +2,13 @@
 
 This website was created for the purpose of learning how to use React. It contains information about myself and my experience. It is currently deployed and can be viewed at [grodriguez.dev](https://grodriguez.dev).
 
-### Demo
+## Demo
 
 <h1 align="center">
   <img src="https://github.com/gio101046/grodriguez.dev/blob/master/readme/demo.gif?raw=true">
-  <br>
 </h1>
 
-### Run Project 
+## Run Project 
 
 To run this project you will need to make sure `npm` and Node are installed on your computer. For more information an how to install `npm` and Node go [here](https://nodejs.org/en/download/).
 
