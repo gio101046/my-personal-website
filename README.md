@@ -4,9 +4,9 @@ This website was created for the purpose of learning how to use React. It contai
 
 ## Demo
 
-<h1 align="center">
+<p align="center">
   <img src="https://github.com/gio101046/grodriguez.dev/blob/master/readme/demo.gif?raw=true">
-</h1>
+</p>
 
 ## Run Project 
 
