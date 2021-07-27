@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './history.css';
+import 'styles/History.css';
 
 class History extends Component {
   constructor(props) {
@@ -119,7 +119,6 @@ class History extends Component {
           })}
         </div>
       </div>
-
     );
   }
 

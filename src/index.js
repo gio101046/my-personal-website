@@ -1,4 +1,4 @@
-import './css/bootstrap.cosmo.min.css';
+import 'styles/bootstrap.cosmo.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';

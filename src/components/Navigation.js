@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './navigation.css';
+import 'styles/Navigation.css';
 
 class NavigationBar extends Component {
   constructor(props) {
@@ -21,8 +21,8 @@ class NavigationBar extends Component {
         href: '#history'
       },
       {
-        content: 'Skills',
-        href: '#skills'
+        content: 'Tech',
+        href: '#technologies'
       },
       {
         content: 'Contact',

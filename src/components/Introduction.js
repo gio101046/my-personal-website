@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ProfilePicture from '../../images/home/profilePictureTwo.jpg';
-import "./introduction.css";
+import ProfilePicture from 'images/home/profilePictureTwo.jpg';
+import "styles/Introduction.css";
 
 const lineOneText = 'Hi, my name is Giovani.';
 const lineTwoText = 'I am a software engineer. ';
@@ -118,9 +118,6 @@ class Introduction extends Component {
       </div>
     ); 
   }
-
-  // componentDidUpdate() {
-  // }
 }
 
 export default Introduction;
